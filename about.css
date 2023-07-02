@@ -1,0 +1,305 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fraunces:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Manrope:wght@300;400;500;600&family=Nunito+Sans:wght@200;300;400;600;700;800&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fraunces:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Manrope:wght@300;400;500;600&family=Montserrat:ital,wght@0,100;0,200;0,300;0,500;1,200;1,300&family=Nunito+Sans:wght@200;300;400;600;700;800&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,800&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'poppins', sans-serif;
+}
+.nav {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1rem 6.5rem;
+  background-color: white;
+  z-index: 100000;
+}
+.nav img {
+  width: 18rem;
+  padding-left: 0;
+}
+#menu-btn {
+  width: 30px;
+  height: 30px;
+  display: none;
+  cursor: pointer;
+}
+#menu-close {
+  display: none;
+  cursor: pointer;
+}
+ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 7px 13px;
+}
+
+ul li {
+  list-style: none;
+  padding: 50px;
+}
+
+ul li a {
+  text-decoration: none;
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: rgb(80, 84, 205);
+}
+ul li a:hover,
+ul .icon i:hover {
+  color: black;
+}
+
+.Aboutus .title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+}
+.Aboutus {
+  position: absolute;
+  background: url(images/Mask-Group-1@2x.png);
+  top: 18%;
+  transition: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+}
+.Aboutus .title {
+  width: 100%;
+  padding: 5px;
+}
+.Aboutus .title h2 {
+  font-size: 40px;
+  color: whitesmoke;
+  text-transform: uppercase;
+  font-family: sans-serif;
+}
+.details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 15rem 4rem 8rem 4rem;
+  justify-content: space-between;
+  background: rgb(26, 24, 24);
+}
+.details h3,
+h5 {
+  color: aliceblue;
+}
+
+.details .one {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding-top: 1.5rem;
+}
+.details .one h3 {
+  font-size: 2.5rem;
+  padding-top: 1.3rem;
+  padding-bottom: 1.1rem;
+}
+.details .one h5 {
+  font-size: 1.2rem;
+  font-weight: 400;
+  padding-bottom: 0.6rem;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.details .one a {
+  color: white;
+  background: brown;
+  padding: 0.5rem 0rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+}
+.details .one a:hover {
+  color: brown;
+  background: white;
+}
+.two {
+  grid-area: two;
+}
+.statement1 {
+  grid-area: statement1;
+}
+.statement2 {
+  grid-area: statement2;
+}
+.details2 .two img {
+  width: 60rem;
+  padding: 120px;
+  border-radius: 50%;
+}
+.details2 {
+  background: #ddd;
+  position: absolute;
+  padding-top: 8rem;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-areas: 
+  "two statement1 "
+  "two statement2 ";
+  grid-gap: 20px;
+}
+
+.details2 .statement1 h3, .details2 .statement2 h3 {
+  font-size: 2.5rem;
+  padding-right: 3rem;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.details2 .statement1 h5, .details2 .statement2 h5 {
+  font-size: 1.1rem;
+  padding-right: 3rem;
+  color: slategrey;
+}
+.values {
+  background-image: url(images/1591363946Core-values.jpg);
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+}
+.values h2 {
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  text-align: center;
+}
+.values h4 {
+  padding: 20px;
+  font-weight: lighter;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.values .container-lg .row .col h2 {
+  font-size: 2.1rem;
+  font-weight: bold;
+  text-align: center;
+  font-family:'Times New Roman', Times, serif;
+}
+.values .container-lg .row .col .p-3  {
+  width: 25rem;
+  height: 25rem;
+
+}
+.values .container-lg .row .col img {
+  width: 5rem;
+  height: 5rem;
+  
+}
+.values .container-lg .row .col h4 {
+  font-size: 1.1rem;
+  font-weight: lighter;
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+}
+.section {
+  min-height: 180vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fddcc356;  
+}
+.container {
+  width: 90%;
+  padding-top: 38rem;
+  max-width: 100rem;
+  margin-top: 20rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.left
+ {
+  width: 70%;
+  height: 700px;
+  background: url(/images/pexels-alena-darmel-7710117.jpg) no-repeat center / cover;
+  border-radius: 70px;
+ }
+ .right
+ {
+  width: 100%;
+  min-height: 400px;
+  background-color: rgb(133, 77, 77);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 20px;
+  color: whitesmoke;
+  margin-left: -200px;
+ }
+ .right h2 {
+  font-size: 40px;
+  font-weight: lighter;
+ }
+ .right p {
+  margin: 20px 0;
+  font-weight: 500;
+  line-height: 20px ;
+ }
+ .right .content span {
+  font-weight: bolder;
+  font-family: Arial, Helvetica, sans-serif;
+ }
+
+@media (max-width: 952px)
+{
+  .nav {
+    padding: 15px 20px;
+  }
+  .nav img {
+    width: 14rem;
+  }
+  #menu-btn {
+    display: initial;
+  }
+  #menu-close {
+    display: initial;
+    font-size: 1.6rem;
+    color: #fff;
+    padding: 30px 0 20px 20px;
+  }
+  .nav ul {
+    position: absolute;
+    top: 0;
+    right: -220px;
+    width: 220px;
+    height: 100vh;
+    background-color:rgb(17, 20, 104, 0.45);
+    backdrop-filter: blur(4.5px);
+    border: 1px solid rgb(255, 255, 255 0.18);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    transition: 0.3s ease;
+  }
+  .nav ul.active {
+    right: 0;
+  }
+  .nav ul li {
+    padding: 20px 0 20px 40px;
+    margin-left: 0;
+  }
+  .nav ul li a {
+    color: #fff;
+  }
+  .nav ul li a:hover {
+    padding: 7px 13px ;
+    border-radius: 3px;
+    background-color: cornflowerblue;
+    transition: 0.3s ease;
+  }
+
+}
