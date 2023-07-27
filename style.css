@@ -323,15 +323,19 @@ h5 {
   background: white;
 }
 .contact {
-  padding: 10rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  background: rgb(209, 203, 203);
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 2fr 1fr;
+  grid-template-areas: 
+  "form map"
+  "info1 ";
+  background-color: rgb(209, 203, 203);
+  padding: 5rem 10rem;
+  height: 75vh;
 }
 .contact .form {
-  width: 55%;
-  padding-bottom: 20rem 0rem;
+  width: 85%;
+  padding-top: 1rem;
 }
 .contact .form h2 {
   font-size: 2rem;
@@ -373,77 +377,64 @@ h5 {
   margin: 13px 0px;
   text-align: center;
   background-color: black;
-  padding: 10px 30px;
+  padding: 10px 20px;
   text-decoration: none;
   width: 100%;
 }
-.contact ,map {
-  padding-left: 5px 20px;
-}
-.contact .map h2 {
-  font-size: 2rem;
-  color: #212529;
-  width: 100%;
-  padding-bottom: 10px;
-}
-.contact .map p {
-  font-size: 1.1rem;
-  color: #212529;
-  width: 70%;
-  padding: 30px 5px;
-}
-.info1 {
-  position: absolute;
-  left: 10%;
-  margin-top: 25%;
-  background: #0e3959;
-  padding: 3px 80px;
+.contact .info1 {
+  background: rgb(131, 124, 124);
+  padding: 5rem;
+  width: 40rem;
+  height: 30rem;
   border-radius: 20%;
 }
-.info1 h3
+.contact .info1 h3
 {
+  font-size: 2.3rem;
+  padding-bottom: 1rem;
   color: #fff;
 }
-.info1 .infobox div {
+.contact .info1 .infobox div {
   display: flex;
   align-items: center;
+  padding-bottom: 1.5rem;
   margin-bottom: 10px;
 }
-.info1 .infobox div span {
+.contact .info1 .infobox div span {
   min-width: 40px;
-  height: 40px;
+  height: 30px;
   color: whitesmoke;
   background: rgb(80, 84, 205);
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.5em;
+  font-size: 1.8em;
   border-radius: 50%;
   margin-right: 15px;
 }
-.info1 .infobox div p {
+.contact .info1 .infobox div p {
   color: whitesmoke;
-  font-size: 1.1em;
+  font-size: 1em;
 }
-.info1 .infobox div a {
+.contact .info1 .infobox div a {
   color: whitesmoke;
   text-decoration: none;
   font-size: 1.1em;
 }
-.sci {
-  margin-top: 20px;
+.contact .sci {
+  margin-top: 3px;
   display: flex;
 }
-.sci li {
+.contact .sci li {
   list-style: none;
   margin-right: 15px;
-  font-size: 1.5em;
+  font-size: 1.7em;
 }
-.sci li a {
+.contact .sci li a {
   color: whitesmoke;
 }
-.sci li a :hover{
-  color: grey;
+.contact .sci li a :hover{
+  color: rgb(80, 84, 205);
 }
 
 @media (max-width: 1024px)
@@ -462,9 +453,103 @@ h5 {
   .nav img {
     width:14rem;
   }
+  .mid {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transition: translate(-50%, -50%);
+    text-align: center;
+  }
+  .details {
+    display: grid;
+    padding: 12px 4px;
+    margin-right: 0;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+      "One"
+      "two";
+  }
+  .details .one  {
+    width: 100%;
+    padding: 30px;
+  }
+  .details .two {
+    width: 100%;
+    padding: 10px;
+    margin-left: 0;
+  }
+  .details .two h3 {
+    font-size: 1.8rem;
+    padding-top: 38px;
+  }
+  .info {
+    display: flex;
+    padding: 0;
+    word-wrap: normal;
+  }
+  .info .statement {
+    width: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 2rem; 
+  }
+  .info .people {
+    width: 45%;
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .info .people .team2 {
+    width: 60rem;
+    height: auto;
+    box-sizing: border-box;
+  }
+  .info .people .team2 .img2 img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    height: 40rem;
+  }
+  .wrap .category {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  .wrap .category .team1 {
+    color: #212529;
+    width: 30rem;
+    height: 35rem;
+    margin-bottom: 2rem;
+    border-radius: 15%;
+    box-sizing: border-box;
+    background: burlywood;
+  }
+  .contact {
+    display: grid;
+    grid-gap: 2px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "form info1";
+    background-color: rgb(209, 203, 203);
+    padding: 7rem;
+    height: 90vh;
+  }
+  .contact .form {
+    width: 75%;
+    padding-top: 2px;
+  }
+  .contact .info1 {
+    width: 25rem;
+  }
 }
 
-@media (max-width: 768px)   {
+@media (max-width: 768px) 
+{
   .nav img {
     width: 12rem;
   }
@@ -510,13 +595,13 @@ h5 {
   }
   .mid {
     padding-bottom: 5rem;
-    left: 10%;
+    left: 1%;
   }
   .mid p {
     width: 90%;
   }
   .mid h2 {
-    padding-top: rem;
+    padding-top: 1rem;
   }
   .details {
     display: grid;
@@ -552,4 +637,147 @@ h5 {
     align-items: flex-start;
     padding: 2rem; 
   }
+  .info .people {
+   display: none;
+  }
+  .info .people .team2 {
+    width: 60rem;
+    height: 90vh;
+    box-sizing: border-box;
+  }
+  .wrap .category {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  .wrap .category .team1 {
+    color: #212529;
+    width: 30rem;
+    height: 35rem;
+    margin-bottom: 2rem;
+    border-radius: 15%;
+    box-sizing: border-box;
+    background: burlywood;
+  }
+  .contact {
+    padding: 3rem 1rem 2rem 8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: rgb(209, 203, 203);
+  }
+  .contact .form {
+    width: 80%;
+  }
+  .contact .info1 {
+    width: 33rem;
+    height: 17rem;
+    padding: 1rem 1.5rem;
+  }
+  .contact .info1 h3 {
+    padding: 2px 0 3px 6px;
+    font-size: 1.6rem;
+  }
+
+  .contact .info1 .infobox div {
+  display: flex;
+  align-items: center;
+  padding-bottom: 12px;
+  margin-bottom: 10px;
+  }
+  .contact .sci {
+    padding-left: 1.4rem;
+  }
+  .contact .sci li {
+    list-style: none;
+    padding-right: 15px;
+    font-size: 1.6em;
+  }
+
 }
+
+@media (max-width: 725px)
+{
+  .nav img {
+    width: 12rem;
+  }
+  #menu-btn {
+    display: initial;
+  }
+  #menu-close {
+    display: initial;
+    font-size: 1.6rem;
+    color: #fff;
+    padding: 30px 0 20px 20px;
+  }
+  .details .two h3 {
+    padding-bottom: 8px;
+  }
+  
+  .wrap {
+    padding: 8px 8px 2rem;
+  }
+  .wrap .category .team1 {
+    color: #212529;
+    width: 25rem;
+    height: 35rem;
+    border-radius: 15%;
+    box-sizing: border-box;
+    background: burlywood;
+  }
+  .wrap .category .team1 .teamdetails .name .namedetails h2 {
+    padding-bottom: 0;
+    font-size: 1.3rem;
+  }
+
+  .contact {
+    height: 100vh;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: rgb(209, 203, 203);
+  }
+  .contact .form {
+    width: 100%;
+  }
+  .contact .info1 {
+    width: 22rem;
+    height: 19rem;
+    margin-left: 1rem;
+  }
+}
+@media(max-width: 600px){
+  .mid h2 {
+    font-size: 3rem;
+  }
+  .details .two {
+    display: none;
+  }
+  .contact .info1 {
+    margin-bottom: 5rem;
+    padding: 2px 14px;
+    width: 20rem;
+    height: 19rem;
+  }
+  .wrap .category .team1 {
+    width: 20rem;
+  }
+
+}
+@media (max-width: 390px){
+  .contact .info1 {
+    margin-left: 0;
+    height: 20rem;
+    width: 17rem;
+    padding: 2px 1rem;
+  }
+  .contact .info1 .infobox {
+    padding: 0;
+    font-size: 0.9rem;
+    
+  }
+}
+

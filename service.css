@@ -7,9 +7,13 @@
   font-family: 'poppins', sans-serif;
   text-decoration: none;
 }
+body {
+  justify-content: center;
+}
 .nav {
   position: fixed;
   display: flex;
+  flex-wrap: nowrap;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
@@ -63,11 +67,11 @@ ul .icon i:hover {
   font-size: 2em;
 }
 .Services {
-  position: absolute;
-  top: 18%;
-  transition: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
   text-align: center;
   width: 100%;
+  padding: 11rem 0 2rem;
 }
 .Services .title {
   background: url(images/Mask-Group-1@2x.png);
@@ -81,99 +85,60 @@ ul .icon i:hover {
   font-family: sans-serif;
 }
 .wrap {
-  position: absolute;
-  top: 23%; 
-  padding: 2rem 5rem;
-  background-color: thistle;
-}
-
-.wrap .paragraph {
-  font-size: 1.3rem;
-  color: rgb(69, 63, 63);
-  padding-bottom: 6px;
-  text-align: justify;
-}
-
-.category {
-  position: absolute;
-  top: 35%;
   display: flex;
-  width: 120rem;
-  padding: 0%;
-  margin: auto;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  background-color: thistle;
-}
-.category .team1 .img img {
-  width: 100%;
-  object-fit: cover;
-}
-.category .team1 {
-  flex-basis: 23%;
-  color: #212529;
-  width: 30rem;
-  height: 37rem;
-  border-radius: 12%;
-  margin: 10px 0px;
-  box-sizing: border-box;
-  background: burlywood;
-}
-.category .team1 .teamdetails {
-  display: flex;
-  flex-direction: column;
   justify-content: center;
-  padding-bottom: 5px;
-}
-.category .team1 .teamdetails .name {
-  display: flex;
-  flex-direction: row;
   align-items: center;
-  justify-content: space-between;
-  padding: 5px 17px;
+  padding: 2rem;
 }
-.category .team1 .teamdetails .name .namedetails h2 {
-  color: #212529;
+.wrap .paragraph {
+  color: black;
   font-size: 1.7rem;
+  font-family: 'Times New Roman', Times, serif;
 }
-.category .team1 .teamdetails .name .namedetails p {
-  color: rgb(95, 92, 92);
-  font-size: 1rem;
-}
-.category .team1 .teamdetails .name .namedetails p span {
-  font-weight: 700;
-  font-size: 1.1rem;
-}
-
-.category .team1 .profession2 p {
-  font-size: 1.1rem;
-  color: dimgray;
-  padding: 15px 30px 30px 30px;
-}
-
-.category .wrap2 {
-  position: absolute;
-  top: 100%;
-  padding: 2rem 5rem;
-  background-color: thistle;
+.wrap2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
 }
 .wrap2 p {
-  font-size: 1.3rem;
-  color: rgb(69, 63, 63);
+  font-size: 1.7rem;
   padding-bottom: 6px;
   text-align: justify;
+  font-family: 'Times New Roman', Times, serif;
+  color: black;
 }
-.foother {
-  position: absolute;
-  top: 178%;
-}
-@media (max-width: 952px)
+
+/* responsiveness */
+@media (max-width: 1024px)
 {
   .nav {
-    padding: 15px 20px;
+    padding: 10px;
+  }
+  ul {
+    padding:5px;
+  }
+  
+  ul li {
+    padding: 20px;
   }
   .nav img {
-    width: 14rem;
+    width:14rem;
+  }
+}
+@media (max-width: 1440px){
+  .Services {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 11rem;
+  }
+}
+
+@media (max-width: 768px) 
+{
+  .nav img {
+    width: 12rem;
   }
   #menu-btn {
     display: initial;
@@ -215,5 +180,38 @@ ul .icon i:hover {
     background-color: cornflowerblue;
     transition: 0.3s ease;
   }
-
+  .Services {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 111%;
+    padding: 6rem 0 1rem;
+  }
+  .wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+  }
+  .wrap2 {
+    padding: 2rem;
+  }
+}
+@media (max-width: 375px)
+{
+  .wrap .paragraph {
+    font-size: 1.2rem;
+  }
+  .wrap2 p{
+    font-size: 1.2rem;
+  }
+}
+@media (min-width: 320px)
+{
+  .wrap .paragraph{
+    font-size: 1.2rem;
+  }
+  .wrap2 p {
+    font-size: 1.2rem;
+  }
 }
