@@ -761,10 +761,10 @@ h5 {
     display: none;
   }
   .contact {
-    height: 110vh;
+    height: 115vh;
   }
   .contact .info1 {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     width: 20rem;
     height: 19rem;
   }
