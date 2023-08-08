@@ -329,10 +329,29 @@ h5 {
   }
 }
 @media(max-width: 690px){
-  
-  .container{
-    padding: 3rem;
+  .details {
+    padding: 12rem 2rem 8rem 2rem;
   }
+  .container{
+    padding: 2rem;
+    width: 100rem;
+  }
+  .container .left {
+    display: none;
+  }
+  .container .right
+ {
+  width: 100%;
+  min-height: 400px;
+  background-color: rgb(133, 77, 77);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 20px;
+  color: whitesmoke;
+  margin-left: 0;
+ }
   .clearfix img {
     width: 25rem;
   }
