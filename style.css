@@ -617,7 +617,7 @@ h5 {
   }
   .details .one  {
     width: 100%;
-    padding: 30px;
+    padding: 10rem 30px 30px;
   }
   .details .two {
     width: 100%;
@@ -664,7 +664,7 @@ h5 {
     background: burlywood;
   }
   .contact {
-    height: 130vh;
+    height: 160vh;
     padding: 3rem 1rem 2rem 8rem;
     display: flex;
     flex-direction: column;
