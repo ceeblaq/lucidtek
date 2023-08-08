@@ -594,8 +594,10 @@ h5 {
     transition: 0.3s ease;
   }
   .mid {
-    padding-bottom: 5rem;
+    position: absolute;
+    top: 35%;
     left: 1%;
+    
   }
   .mid p {
     width: 90%;
@@ -662,6 +664,7 @@ h5 {
     background: burlywood;
   }
   .contact {
+    height: 130vh;
     padding: 3rem 1rem 2rem 8rem;
     display: flex;
     flex-direction: column;
